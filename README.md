@@ -6,8 +6,6 @@
 
 </div>
 
-## Facet
-
 Um programa de linha de comando que possibilita usar comandos simples para algum objetivo, Ex.:
 
 • !dx roda um dado de x lados;
