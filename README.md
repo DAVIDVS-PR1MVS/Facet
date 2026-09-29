@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/logo.png" alt="Facet Logo" width="auto" />
+  <img src="assets/logo.png" alt="Facet Logo" width="120" />
 
  # Facet
 
