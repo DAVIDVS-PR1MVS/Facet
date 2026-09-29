@@ -1,3 +1,7 @@
+<div align="center">
+
+  <img src="assets/logo.png" alt="DitPlex Logo" width="120" />
+
 ## Facet
 ---
 
