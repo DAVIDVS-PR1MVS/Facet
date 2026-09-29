@@ -1,7 +1,7 @@
 <div align="center">
 
   <img src="assets/logo.png" alt="Facet Logo" width="auto" />
-  ## Facet
+ # Facet
 
 </div>
 
