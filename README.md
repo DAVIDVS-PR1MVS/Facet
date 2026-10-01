@@ -4,17 +4,19 @@
 
  # Facet
 
+A Chess Engine written in C#
+
 </div>
 
-Um Motor de Xadrez escrito em C#
+
 
 ---
 
-### Qual o Objetivo?
+### What is the objective?
 
-Esse projeto tem como objetivo disponibilizar um Motor de Xadrez de código aberto para, principalmente, a comunidade de Xadrez
+This project aims to provide an open-source Chess Engine, primarily for the chess community.
 
 ---
 
-#### Licença 
-Esse projeto está licenciado sob a [Licença MIT](LICENSE)
+#### License 
+This project is licensed under the [MIT License].(LICENSE)
