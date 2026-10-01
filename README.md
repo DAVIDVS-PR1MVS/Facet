@@ -19,4 +19,4 @@ This project aims to provide an open-source Chess Engine, primarily for the ches
 ---
 
 #### License 
-This project is licensed under the [MIT License].(LICENSE)
+This project is licensed under the [Licença MIT].(LICENSE)
