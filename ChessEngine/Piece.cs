@@ -68,7 +68,7 @@ public static class Piece
             
         int numero = CharToType[char.ToUpperInvariant(c)];
         
-        if (tipo == None)
+        if (numero == None)
             return -1;
         
         if (char.IsUpper(c))
