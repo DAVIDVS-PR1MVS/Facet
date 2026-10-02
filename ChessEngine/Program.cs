@@ -11,3 +11,6 @@ foreach (int cor in new[] { Piece.White, Piece.Black })
     }
 }
 Console.WriteLine();
+Console.WriteLine(Piece.FromChar('x'));
+Console.WriteLine(Piece.FromChar('é'));
+Console.WriteLine(Piece.FromChar('k'));
