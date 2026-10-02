@@ -10,6 +10,21 @@ public static class Piece
     public const int White = 0b01000;
     public const int Black = 0b10000;
     
+    private static readonly char[] PieceChars = ['.', 'P', 'N', 'B', 'R', 'Q', 'K'];
+    
+    private static int[] BuildCharToType()
+    {
+        int[] map = new int[128];
+        map['P'] = Pawn;
+        map['N'] = Knight;
+        map['B'] = Bishop;
+        map['R'] = Rook;
+        map['Q'] = Queen;
+        map['K'] = King;
+        return map;
+    }
+    private static readonly int[] CharToType = BuildCharToType();
+    
     public static int Type(int piece)
     {
         return piece & 0b00111;
@@ -34,7 +49,8 @@ public static class Piece
     {
         if (Type(piece) == None)
             return '.';
-        char letra = "?PNBRQK"[Type(piece)];
+            
+        char letra = PieceChars[Type(piece)];
         
         if (IsBlack(piece))
             return char.ToLower(letra);
@@ -46,7 +62,15 @@ public static class Piece
     {
         if (c == '.')
             return None;
-        int numero = "?PNBRQK".IndexOf(char.ToUpper(c));
+            
+        if (c>=128)
+            return -1;
+            
+        int numero = CharToType[char.ToUpperInvariant(c)];
+        
+        if (tipo == None)
+            return -1;
+        
         if (char.IsUpper(c))
             return White | numero;
         return Black | numero;
