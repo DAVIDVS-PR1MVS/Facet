@@ -3,8 +3,8 @@ Console.WriteLine("Motor iniciado");
 // ---------------------------------------------------------------
 // Opções: ligue quando a parte correspondente estiver pronta
 // ---------------------------------------------------------------
-bool testarEnPassant = false;     // ligue quando o campo 4 do FEN (en passant) estiver implementado
-bool rejeitarPontoNoFen = false;  // ligue se decidir que '.' não vale num FEN
+bool testarEnPassant = false;
+bool rejeitarPontoNoFen = false;
 
 // ---------------------------------------------------------------
 // Infraestrutura: só imprime o que falhou; no fim, código de saída 1 se algo falhou
