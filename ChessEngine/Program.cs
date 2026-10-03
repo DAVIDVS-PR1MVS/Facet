@@ -187,7 +187,7 @@ if (testarEnPassant)
     foreach (var (fen, casa) in epValidos)
     {
         var tab = new Board();
-        Check("en passant válido: [" + fen + "]", tab.LoadFenPosition(fen) && tab.EnPassantSquare == casa);
+        Check("en passant válido: [" + fen + "]", tab.LoadFenPosition(fen) && tab.EnPassant == casa);
     }
 
     string[] epInvalidos =
