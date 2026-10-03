@@ -153,14 +153,14 @@ foreach (string fen in falhasApos)
     int[] antes = (int[])tab.Squares.Clone();
     int ladoAntes = tab.SideToMove;
     int roqueAntes = tab.CastlingRights;
-    int epAntes = tab.EnPassantSquare;
+    int epAntes = tab.EnPassant;
 
     bool ok = baseOk
               && !tab.LoadFenPosition(fen)
               && Iguais(antes, tab.Squares)
               && tab.SideToMove == ladoAntes
               && tab.CastlingRights == roqueAntes
-              && tab.EnPassantSquare == epAntes;
+              && tab.EnPassant == epAntes;
     Check("falha deixa o Board intacto: [" + fen + "]", ok);
 }
 
