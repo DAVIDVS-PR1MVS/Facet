@@ -9,6 +9,9 @@ public static class Piece
     public const int King = 0b00110;
     public const int White = 0b01000;
     public const int Black = 0b10000;
+    public const int TypeMask = 0b00111;
+    public const int ColorMask = 0b11000;
+    public const int Invalid = -1;
     
     private static readonly char[] PieceChars = ['.', 'P', 'N', 'B', 'R', 'Q', 'K'];
     
@@ -27,12 +30,12 @@ public static class Piece
     
     public static int Type(int piece)
     {
-        return piece & 0b00111;
+        return piece & TypeMask;
     }
     
     public static int Color(int piece)
     {
-        return piece & 0b11000;
+        return piece & ColorMask;
     }
     
     public static bool IsWhite(int piece)
@@ -49,6 +52,9 @@ public static class Piece
     {
         if (Type(piece) == None)
             return '.';
+        
+        if (Type(piece)>King)
+            return '?';
             
         char letra = PieceChars[Type(piece)];
         
@@ -64,12 +70,12 @@ public static class Piece
             return None;
             
         if (c>=128)
-            return -1;
+            return Invalid;
             
         int numero = CharToType[char.ToUpperInvariant(c)];
         
         if (numero == None)
-            return -1;
+            return Invalid;
         
         if (char.IsUpper(c))
             return White | numero;
